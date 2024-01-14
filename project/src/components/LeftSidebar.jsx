@@ -1,5 +1,6 @@
 import React from "react";
 import "./LeftSidebar.css";
+import Globe from "../images/Globe.svg";
 // import { NavLink } from "react-router-dom";
 
 const LeftSidebar = () => {
@@ -14,7 +15,8 @@ const LeftSidebar = () => {
             <button className="nav-btn">
               <p>Public</p>
             </button>
-            <button className="nav-btn">
+            <button className="nav-btn li3">
+            <img src={Globe} alt="Globe" />
               <p style={{ paddingLeft: "10px" }}> Questions </p>
             </button>
             <button className="nav-btn">

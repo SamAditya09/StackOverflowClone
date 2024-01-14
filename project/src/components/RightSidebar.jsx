@@ -1,28 +1,13 @@
+import React from "react";
 import "./RightSidebar.css";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import Widget from "./widget.jsx";
+import WidgetTags from "./WidgetTags.jsx";
 
 const RightSidebar = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => {
-        setPosts(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
   return (
     <aside className="right-sidebar">
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
+      <Widget />
+      <WidgetTags />
     </aside>
   );
 };
