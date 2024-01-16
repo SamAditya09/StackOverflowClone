@@ -13,9 +13,9 @@ function App() {
       <Navbar/>
       <div className='Maindiv'>
         <div><LeftSidebar/></div>
+        <div className='col'><Card/></div>
         <div><RightSidebar/></div>
       </div>   
-      <Card/>
     </>
   );
 }

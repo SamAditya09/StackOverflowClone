@@ -1,20 +1,61 @@
-.Maindiv{
-    width: 100%;
+.Maindiv {
+  width: 100%;
 }
-.card{
-    background-color: rgb(255, 73, 7);
+.card {
+  background-color: rgb(255, 73, 7);
+  color: white;
 }
-.card-body{
-    background-color: rgb(255, 73, 7);
-    display: flex;
-    justify-content: space-around;
+.container {
+  width: 100%;
 }
-#Image2,#Image3{
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+.nextbtn {
+  display: flex;
+  justify-content: space-between;
 }
-.section2{
-    display: flex;
-    justify-content: space-between;
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+table {
+  width: 20%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+th,
+td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+}
+.grid1,
+.grid2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button.btn {
+  background-color: rgb(240, 156, 72);
+  width: 50%;
+}
+
+#profileImg {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.card-title {
+  font-size: 15px;
+}
+#Image2,
+#Image3 {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.section2 {
+  display: flex;
+  justify-content: space-between;
 }

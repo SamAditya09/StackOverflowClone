@@ -2,4 +2,10 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(236, 230, 230);
+    width: fit-content;
+    min-height: 70vh;
+}
+
+.col{
+    padding-top: 3%;
 }
