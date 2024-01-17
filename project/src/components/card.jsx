@@ -4,6 +4,8 @@ import share from "../images/share.png";
 import comment from "../images/comment.png";
 import { useState, useEffect } from "react";
 import "./card.css";
+import { FaMinus } from "react-icons/fa6";
+import { FiPlus } from "react-icons/fi";
 
 export const Card = () => {
   const [value, setValue] = useState([]);
@@ -51,55 +53,77 @@ export const Card = () => {
   return (
     <>
       {value.map((val) => (
-        <div className="Maindiv col">
-          <div className="container">
-            <div className="card">
-              <div className="nextbtn">
-                <h5 className="card-header">{val.title}</h5>
-                <table>
-                  <tr>
-                    <td>-</td>
-                    <td>{val.owner.reputation}</td>
-                    <td>+</td>
-                  </tr>
-                </table>
-              </div>
-              <div className="card-body">
-                <div className="grid1">
-                  <img
-                    src={val.owner.profile_image}
-                    alt="image"
-                    id="profileImg"
-                  />
-                  <h5 className="card-title">{val.owner.display_name}</h5>
-                  <button className="btn">{val.owner.reputation}</button>
+        <div className="questions-section">
+          <div className="questions-container">
+            <div className="questions-heading">
+              <div className="question-title">
+                <h3> {val.title} </h3>
+                <div className="numbers">
+                  <div className="number">
+                    <p id="minus">
+                      {" "}
+                      <FaMinus />{" "}
+                    </p>
+                    <p id="num"> {val.owner.reputation} </p>
+                    <p id="plus">
+                      {" "}
+                      <FiPlus />{" "}
+                    </p>
+                  </div>
                 </div>
-                <div className="grid2">
-                  <h6>Active {timeAgo(val.creation_date)}</h6>
-                  <h6>|</h6>
-                  <h6>Active {timeAgo(val.last_activity_date)}</h6>
-                  <h6>|</h6>
-                  <h6> viewed {val.view_count}k</h6>
+              </div>
+
+              <div className="question-author-details">
+                <div className="author-desc">
+                  <img src={val.owner.profile_image} alt="authorImg" />
+                  <p>{val.owner.display_name}</p>
+                  <div>
+                    <p> {val.owner.reputation} </p>
+                  </div>
+                </div>
+                <div className="question-asked-time">
+                  <p> Asked {timeAgo(val.creation_date)}</p>
+                  <span className="div-line"> </span>
+                  <p> Active {timeAgo(val.last_activity_date)} </p>
+                  <span className="div-line"> </span>
+                  <p> Viewed {val.view_count}k times </p>
                 </div>
               </div>
             </div>
-            <div className="question">
+
+            <div className="questions-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                numquam amet dolores non iste quasi at sint earum corporis
-                voluptatem?
+                {" "}
+                Inside of visual studio code, I'm trying to execute a script.bat
+                from the command line, but I'm getting the following error.{" "}
               </p>
-              <div className="section2">
+              <div className="compiler">
                 <div>
-                  <h5>
-                    <img src={bookmark} alt="Image" />
-                    {val.answer_count}
-                  </h5>
+                  {" "}
+                  <p>
+                    {" "}
+                    File C:\Theses_Repo\train-cnn\environment\Scripts\
+                    activate.psl cannot be loaded because running scripts is
+                    disabled on this system.{" "}
+                  </p>{" "}
                 </div>
-                <div>
-                  <img src={share} alt="Image2" srcset="" id="Image2" />
-                  <img src={comment} alt="Image3" srcset="" id="Image3" />
-                </div>
+              </div>
+              <p>
+                {" "}
+                After reading <a href="/"> this</a> I tried to run the visual
+                studio code in administrator mode, thinking that the problem was
+                a matter of privileges. But the error is throwing anyway.{" "}
+              </p>
+            </div>
+
+            <div className="question-footer">
+              <div className="save-ques">
+                <img src={bookmark} alt="saveImg" />
+                <p> {val.answer_count} </p>
+              </div>
+              <div className="share-comment">
+                <img src={share} alt="shareImg" />
+                <img src={comment} alt="commentImg" />
               </div>
             </div>
           </div>

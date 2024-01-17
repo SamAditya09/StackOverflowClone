@@ -1,42 +1,34 @@
 import React from "react";
-import logo from "../images/logo.png";
-import search from "../images/search-solid.svg";
+import logo from "../images/navlogo.svg";
 import "./navbar.css";
-import bars from "../images/bars-solid.svg";
+import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="main-nav">
-        <div className="navbar">
-          <button className="slide-in-icon">
-            <img src={bars} alt="bars" width="15" />
-          </button>
-          <div className="navbar-1">
-            <div to="#" className="nav-item nav-logo">
-              <img src={logo} alt="logo" />
+      <div className="navbar">
+        <section className="navbar_wrapper">
+          <div className="navbar">
+            <div className="logo">
+              <img src={logo} alt="stack-over-flow-logo" />
             </div>
-            <form>
-              <input type="text" id="search" placeholder="Search..." />
-              <img
-                src={search}
-                alt="search"
-                width="18"
-                className="search-icon"
+            <div className="search_wrapper">
+              <AiOutlineSearch className="search_icon" size={20} />
+              <input
+                type="text"
+                className="search_input"
+                placeholder="Search"
               />
-            </form>
-            <div to="#" className="nav-item nav-btn res-nav">
-              About
             </div>
-            <div to="#" className="nav-item nav-btn res-nav">
-              Products
+            <div className="menu">
+              <a href="/">About</a>
+              <a href="/">Products</a>
+              <a href="/">For teams</a>
             </div>
-            <div to="#" className="nav-item nav-btn res-nav">
-              For Teams
-            </div>
+            <AiOutlineMenu className="menu_bar" size={20} />
           </div>
-        </div>
-      </nav>
+        </section>
+      </div>
     </>
   );
 };

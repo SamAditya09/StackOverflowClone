@@ -1,15 +1,15 @@
 import React from "react";
 import "./RightSidebar.css";
-import Widget from "./widget.jsx";
-import WidgetTags from "./WidgetTags.jsx";
+import Linked from "./Linked.jsx";
+import Related from "./Related.jsx";
 
 const RightSidebar = () => {
   return (
     <>
-    <div className="right-sidebar">
-      <Widget />
-      <WidgetTags />
-    </div>
+      <div className="right-side">
+        <Linked />
+        <Related />
+      </div>
     </>
   );
 };
